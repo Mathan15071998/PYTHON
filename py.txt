@@ -1,1 +1,360 @@
+Indentation:
+    Indentation in python refers to the gap/space at the beginning of a code line, which used to refer block of codes.
 
+    if i>0 and i<101:
+        print("I is between 1 to 100")- this example illustrates this two lines belong to a block of code.
+    
+Variables:
+    Variables act as a container for the value we store and variables are created when we assigned the value to it.
+
+        c=5
+        ABC=10
+    Condition-never starts with a number(should be alpha numeric) and python keyword, moreover, python variables are case
+    sensitive.(camel case/pascal case/snake case)
+
+    Unpacking-Py allows us to extract multiple values into many variables, it is called unpacking.
+        RAM=[1,2,3,4]
+        a,b,c,d=RAM
+        print(a)
+        print(b)
+        print(c)
+        print(d)
+    
+    Globla Variables:
+        Anyvalue created outside of a function is known as global variable, which can be used both in and out of function.
+            a=10
+            def hi():
+                print(a)
+            hi()
+            print(a)      -here we will get 2 10's as output. But if the variable created within the function then
+            it is local variable which can be used only inside that function.
+
+            Global Keyword- We can also create global variable inside a function by using the global keyword.
+
+                def hi():
+                    global a
+                    a = 10
+                    print(a)
+                hi()
+                print(a)        -Here also we will get two 10's as output.
+
+                we can also change the value of a global variable by creating global keyword.
+
+                    a=10
+                    def hi():
+                        global a
+                        a=1
+                    hi()
+                    print(a)            -Here we will get the new updated value of "1" as the output.
+
+
+Comments:
+    Comments are created using "#"(oneline comment) or """ """(multi-line comments). This is created to make the code more readable or understandable.
+
+    #I am going to store the integer value of 5 in x variable.
+        x=5
+    
+    """I am going to store the integer
+    value of 5
+    in x variable"""
+        x=5
+
+Important data types:String/Integer/Float(double)/Bool
+
+    String- String is created using "" or ''.
+
+        a="Hi da" or a='Hi da'
+        print(type(a))-type function allows to find the data type of a variable.
+
+    Integer-When we assigned a numeric value to a variable, integer is created.
+
+        a=3 or a=int(3.0)
+
+    Float-Decimal numeric value in programming is known as float/double.
+        a=1.0 or a=float(1)
+
+    Bool-In programming, we should know whether  a line of code is true or false, so evalution is crucial. 
+    bool() function in py allows us to find a line of code is true or false.
+
+    Anything is true except nothing like empty data types/empty collections.
+
+
+Random()- allows to import random number bw two numbers.
+
+    import random
+    print(random.randrange(1,11))
+
+Python Casting- allows us to convert one data type into another.
+    
+    a=int(1.0)
+    print(a)
+    print(type(a))
+
+
+Multi-line strings- Multi line strings are created using "three double quotes" or "three single line quotes".
+
+ a=""" Hi               a='''Hi
+    da             or   da
+    epdi irruka"""      epdi irruka'''
+
+
+Arrays-Since strings in python are arrays, we can access them in 2 ways, either through looping or indexing.
+
+for i in "Hello World":
+    print(i)
+        or 
+a="Hello world"
+print(a[1])
+
+
+Slicing the srings:
+    We can return a range of characters in the string using sling the index.
+
+    b = "Hello, World!"
+    print(b[2:5])
+    print(b[:5])
+    print(b[2:])
+    print(b[-5:-2])
+
+How to modify the strings:
+Using different in-build functions, we can modify the strings. for an example, upper(), lower(),strip(to remove the 
+whitespace in the strings), replace()
+
+    a = "Jello, World!"
+    print(a.replace("J", "H"))
+split()
+    a = "Hello, World!"
+    b = a.split(",")
+    print(b)
+        or
+    a = "Jello, World!"
+    print(a.split())
+
+String concotenate- combining 2 strings.
+
+String format()- allows us to combine strings and numbers using the placeholders{}.
+
+    age = 36
+    intro = "My name is John, I am " + age
+    print(intro)        - THIS WILL THROUGH THE ERROR THAT STRINGS AND INTEGER CANNOT BE COMBINED.
+
+    Using FORMAT():
+    age=36
+    intro="My name is John, I am {}"
+    print(intro.format(age))-- Output will be"My name is John, I am 36".
+
+We can pass as many as arguments inside the placeholders.
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price)) 
+
+Output is:
+I want 3 pieces of item 567 for 49.95 dollars.
+
+Format method with index to make sure things are placed at the right place.
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price)) 
+ 
+  Output is:
+    I want to pay 49.95 dollars for3 pieces of item 567.
+
+
+Escape characters:
+    Using escape characters we can insert illegal strings inside a string.
+            a="Hi \"da\" epdi irruka"
+            print(a)
+    
+    a="hi\nda"
+    print(a)
+
+\t- will add a tab space between the strings.
+\b- will remove the space betweent he strings.
+    #This example erases one character (backspace):
+    txt = "Hello \bWorld!"
+    print(txt) 
+
+Important string methods:
+1.Capitalize()
+
+a="hi di"
+print(a.capitalize())-"Hi di" is the output, so first letter in the string will be converteed into the capital.
+
+2. Upper
+
+It makes all the letters uppercase.
+
+txt = "Python is awesome!"
+print(txt.upper())
+'PYTHON IS AWESOME!'
+
+3. Lower
+
+It makes all the letters lowercase.
+
+txt = "PYTHON IS AWESOME!"
+print(txt.lower())
+'python is awesome!'
+
+4. Isupper
+
+It checks if all the letters are uppercase.
+
+txt = "PYTHON IS AWESOME!"
+print(txt.isupper())
+True
+
+5. Islower
+
+It checks if all the letters are lowercase
+
+txt = "PYTHON IS AWESOME!"
+print(txt.islower())
+False
+
+The following 3 methods are similar so I will do examples that include all of them.
+6. Isnumeric
+
+It checks if all the characters are numeric.
+7. Isalpha
+
+It checks if all the characters are in the alphabet.
+
+8. Isalnum
+
+It checks if all the characters are alphanumeric (i.e. letter or number).
+
+# Example 1
+txt = "Python"
+print(txt.isnumeric())
+False
+print(txt.isalpha())
+True
+print(txt.isalnum())
+True
+
+# Example 2
+txt = "2021"
+print(txt.isnumeric())
+True
+print(txt.isalpha())
+False
+print(txt.isalnum())
+True
+
+# Example 3
+txt = "Python2021"
+print(txt.isnumeric())
+False
+print(txt.isalpha())
+False
+print(txt.isalnum())
+True
+
+# Example 4
+txt = "Python-2021"
+print(txt.isnumeric())
+False
+print(txt.isalpha())
+False
+print(txt.isalnum())
+False
+
+9. Count
+
+It counts the number of occurrences of the given character in a string.
+
+txt = "Data science"
+print(txt.count("e"))
+2
+
+10. Find
+
+It returns the index of the first occurrence of the given character in a string.
+
+txt = "Data science"
+print(txt.find("a"))
+1
+
+We can also find the second or other occurrences of a character.
+
+print(txt.find("a", 2))
+3
+
+If we pass a sequence of characters, the find method returns the index where the sequence starts.
+
+print(txt.find("sci"))
+5
+
+11. Startswith
+
+It checks if a string starts with the given character. We can use this method as a filter in a list comprehension.
+
+mylist = ["John", "Jane", "Emily", "Jack", "Ashley"]
+j_list = [name for name in mylist if name.startswith("J")]
+j_list
+['John', 'Jane', 'Jack']
+
+12. Endswith
+
+It checks if a string ends with the given character.
+
+txt = "Python"
+print(txt.endswith("n"))
+True
+
+Both the endswith and startswith methods are case sensitive.
+
+txt = "Python"
+print(txt.startswith("p"))
+False
+print(txt.startswith("P"))
+True
+
+13. Replace
+
+It replaces a string or a part of it with the given set of characters.
+
+txt = "Python is awesome!"
+txt = txt.replace("Python", "Data science")
+txt
+'Data science is awesome!'
+
+14. Split
+
+It splits a string at the occurrences of the specified character and returns a list that contains each part after splitting.
+
+txt = 'Data science is awesome!'
+print(txt.split())
+['Data', 'science', 'is', 'awesome!']
+
+By default, it splits at whitespace but we can make it based on any character or set of characters.
+15. Partition
+
+It partitions a string into 3 parts and returns a tuple that contains these parts.
+
+txt = "Python is awesome!"
+txt.partition("is")
+('Python ', 'is', ' awesome!')
+txt = "Python is awesome and it is easy to learn."
+txt.partition("and")
+('Python is awesome ', 'and', ' it is easy to learn.')
+
+The partition method returns exactly 3 parts. If there are multiple occurrences of the character used for partitioning, the first one is taken into account.
+
+txt = "Python and data science and machine learning"
+txt.partition("and")
+('Python ', 'and', ' data science and machine learning')
+
+We can also do a similar operation with the split method by limiting the number of splits. However, there are some differences.
+
+    The split method returns a list
+    The returned list does not include the characters used for splitting
+
+txt = "Python and data science and machine learning"
+txt.split("and", 1)
+['Python ', ' data science and machine learning']
