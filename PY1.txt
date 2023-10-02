@@ -1,0 +1,186 @@
+Python collections:
+1)List:
+
+    List is created using "[]". List is useful to store multiple values in a line or within a variable.
+    Collection of data will be handled by list.
+
+    Characteristics of list:
+        ordered, we can add, remove and modify the list. And allows duplicates.
+
+
+List can also be created by using list()-list constructor apart from square bracket.
+
+a=1,2,3
+b=list(a)
+print(b)
+
+Accessing the list:
+1)by index:
+    a=["Hi","da","Hi","di"]
+    print(a[1])-da is the output.
+
+    Note:-1 is refers to the last element in the list.
+
+    We can also access the range of items in the list.
+
+    a = ["Hi", "da", "Hi", "di"]
+    print(a[1:4])-['da', 'Hi', 'di'] is the output. We can also access the range of index as like before accessed in the strings.
+
+    Check whether a item present in the list or not:
+
+    thislist = ["apple", "banana", "cherry"]
+if "raj" in thislist:
+  print("Yes, 'apple' is in the fruits list")
+else:
+	print("No")---- output will be no.
+
+    thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")---output is ​Yes, 'apple' is in the fruits list.
+
+2)Through looping:
+a=[1,2,3,4,5]
+for i in a:
+    print(i,end=", ")-1, 2, 3, 4, 5, 
+
+Modification in the list:
+1)add to the last- using append method.
+
+a = ["Hi", "da", "Hi", "di"]
+a.append(1)
+print(a)- ['Hi', 'da', 'Hi', 'di', 1]
+
+2)change the existing value
+
+a = ["Hi", "da", "Hi", "di"]
+a[3]="da"
+print(a)-['Hi', 'da', 'Hi', 'da']
+
+3)remove last item:
+a = ["Hi", "da", "Hi", "di"]
+a.pop()
+print(a)-['Hi', 'da', 'Hi']
+
+4)remove the first element:
+a = ["Hi", "da", "Hi", "di"]
+a.pop(0)
+print(a)-['da', 'Hi', 'di']
+
+
+5)Change a Range of Item Values:
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+
+thislist[1:3] = ["blackcurrant", "watermelon"]
+
+print(thislist)-['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'mango']
+
+6)replace one value with 2 values:
+thislist = ["apple", "banana", "cherry"]
+
+thislist[1:2] = ["blackcurrant", "watermelon"]
+
+print(thislist)---['apple', 'blackcurrant', 'watermelon', 'cherry']
+
+7)Inserting one item at 2 items place:
+thislist = ["apple", "banana", "cherry"]
+
+thislist[1:3] = ["watermelon"]
+
+print(thislist)-['apple', 'watermelon']
+
+8)Insert method to insert the item:
+a = ["Hi", "da", "Hi", "di"]
+a.insert(0,"hello")
+print(a)-['hello', 'Hi', 'da', 'Hi', 'di']
+
+9)Merge 2 list:
+a = ["Hi", "da", "Hi", "di"]
+b=[1,2,3]
+a.extend(b)
+print(a)-['Hi', 'da', 'Hi', 'di', 1, 2, 3]
+
+we can append any iterable object using the exend() function.
+a=[1,2,3,4]
+b=(1,2)
+a.extend(b)
+print(a)-[1,2,3,4,1,2]
+
+10)other way to remove the list item:
+a=[1,2,3,4,5]
+a.remove(1)
+print(a)-[2,3,4,5]
+
+a=[1,2,3,4,5]
+del a[0]
+print(a)-[2,3,4,5]
+
+11)to delete the complete list
+a=[1,2,3,4,5]
+del a
+print(a)
+
+12)to clear the lista=[1,2,3,4,5]
+a.clear()
+print(a)-[]
+
+List comprehension:
+    It offers short syntaxx to create a new list based on the values in the parent list.
+    
+    fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+print(newlist)-['apple', 'banana', 'mango']
+
+a=["Hello","Hi","Bye","De"]
+b=[]
+for i in a:
+    if "H" in i:
+        b.append(i)
+print("B will contain:",b)-B will contain: ['Hello', 'Hi']
+
+sort() function:arranges alphabetically.
+
+a=[11,5,1,2,3,4,10,12,15]
+a.sort()
+print(a)-[1, 2, 3, 4, 5, 10, 11, 12, 15]
+
+To reverse the list-use (reverse= True)
+
+a=[11,5,1,2,3,4,10,12,15]
+a.sort(reverse= True)
+print(a)-[15, 12, 11, 10, 5, 4, 3, 2, 1]
+
+reverse the complete list
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist) -['cherry', 'Kiwi', 'Orange', 'banana']
+
+Sort the list based on how close the number is to 50:
+def myfunc(n):
+  return abs(n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)-[50, 65, 23, 82, 100] 
+
+
+Copy()-allows to copy the list:
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)-['apple', 'banana', 'cherry'] 
+
+another way is using the constructor:
+
+a=[11,5,1,2,3,4,10,12,15]
+b=list(a)
+print(b)-[11, 5, 1, 2, 3, 4, 10, 12, 15]
+
+
+
+
+
+
+
+
