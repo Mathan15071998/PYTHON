@@ -146,7 +146,7 @@ a=[11,5,1,2,3,4,10,12,15]
 a.sort()
 print(a)-[1, 2, 3, 4, 5, 10, 11, 12, 15]
 
-To reverse the list-use (reverse= True)
+To reverse the list-use (reverse= True)(to sort the list in descending order)
 
 a=[11,5,1,2,3,4,10,12,15]
 a.sort(reverse= True)
