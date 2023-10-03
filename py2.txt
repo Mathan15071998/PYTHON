@@ -1,0 +1,102 @@
+Tuple:
+
+    Tuple is created using "()" or using tuple constructor
+    a=(1,2,3) or   a=(1,2,3) so b=tuple(a)
+
+    Characteristics:
+        Tuple is ordered, allows duplicate but unchangeable.(allows any type of data.)
+        tuple is changeable once it converted into list.
+
+        a=(1,2,3)
+        b=list(a)
+        b.append(4)
+        print(b)
+        a=list(b)
+        print(a)
+
+        or tuple method
+
+        thistuple = ("apple", "banana", "cherry")
+        y = ("orange",)
+        thistuple += y
+        print(thistuple)
+
+
+    Note: if we created a tuple with one item, make sure to put the comma at the end of the one element we created,
+    so py can recognize it as a tuple. And using del keyword, we can delete the tuple.
+
+    a=("Hi",)
+    print(type(a))
+
+    same like strings and list, we can access tuple with index position(can be negative as well) and also
+    we can return a range of characters.
+
+    we can also check if a item presents in the tuple or not using the if keyword.
+
+Packing=when we assign values to a variable which is known as packing, instead if we extract the value from the tuple. then
+it will be known as unpacking.
+
+
+Note:The number of variables must match the number of values in the tuple, if not, 
+you must use an asterisk to collect the remaining values as a list.
+
+a=("Hi","bye","Hello","de","di")
+bye,by,*hi=a
+print(bye)
+print(by)
+print(hi)-Hi
+          bye
+          ['Hello', 'de', 'di']
+Apart from index, I can access tuple through looping
+a=("Hi","bye","Hello","de","di")
+for i in a:
+    print(i)
+    bye
+    Hello
+    de
+    di
+
+
+Multiply Tuples-If you want to multiply the content of a tuple a given number of times, you can use the * operator:
+
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+print(mytuple)-('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
+
+
+set:
+    set can be created using curly brackets or set constructor.
+
+    set is unordered, will not allow any duplicate and cannot modify existing value but we can add/remove.
+
+    Note:in set    1 and "true" represents the same so any one value will be accepted among 2 if set has these two items.
+    set can be accessed only through looping or converted into list.
+
+HOW TO ADD/REMOVE SET ITEMS:
+a={1,2,3}
+a.add(4)
+print(a)-{1, 2, 3, 4}
+
+a={1,2,3}
+a.remove(1)
+print(a)-{2, 3}
+
+can merge 2 sets:
+
+a={1,2,3}
+b={4,5,6}
+a.update(b)
+print(a)-{1, 2, 3, 4, 5, 6}
+
+
+Add Any Iterable:
+The object in the update() method does not have to be a set, it can be any 
+iterable object (tuples, lists, dictionaries etc.).
+
+thisset = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+thisset.update(mylist)
+print(thisset)-{'banana', 'cherry', 'apple', 'orange', 'kiwi'}
+
+Note: remove() alternate is discard(.) If the item to remove does not exist, discard() will NOT raise an error, whle remove do raise it.
+using pop()in  the sets will remove a random item in the set.
