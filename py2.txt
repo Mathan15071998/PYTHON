@@ -100,3 +100,74 @@ print(thisset)-{'banana', 'cherry', 'apple', 'orange', 'kiwi'}
 
 Note: remove() alternate is discard(.) If the item to remove does not exist, discard() will NOT raise an error, whle remove do raise it.
 using pop()in  the sets will remove a random item in the set.
+
+Dictionaries:
+    Dic are created with curly brackets along with keys and values.
+
+    Dic are ordered, changeable, allows any type of data but no duplicate.
+
+   a={
+    "key": "value",
+    "key1": "value1",
+    "key2": "value2"
+
+}
+print(a.keys())-dict_keys(['key', 'key1', 'key2'])
+
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}-Get the value of the "model" key:
+
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict.get("model")
+print(x)-Mustang 
+
+change the existing value by :
+a={
+    "key": "value",
+    "key1": "value1",
+    "key2": "value2"
+
+}
+a["key"]=1
+print(a)-{'key': 1, 'key1': 'value1', 'key2': 'value2'}
+
+Add a value:
+a={
+    "key": "value",
+    "key1": "value1",
+    "key2": "value2"
+
+}
+a["key3"]=1
+print(a)-{'key': 'value', 'key1': 'value1', 'key2': 'value2', 'key3': 1}
+
+remove the particular item:
+
+a={
+    "key": "value",
+    "key1": "value1",
+    "key2": "value2"
+
+}
+a.pop("key")
+print(a)-{'key1': 'value1', 'key2': 'value2'}
+
+
+Copy a dictionary:
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)-{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
+
+
